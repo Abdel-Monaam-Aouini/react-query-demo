@@ -1,0 +1,36 @@
+{
+  "name": "react-query-demo",
+  "description": "React Query example project",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "format": "prettier --write \"**/*.{jsx,js,css,json,md}\"",
+    "json-server": "json-server --watch api/db.json  --port 3004"
+  },
+  "author": "Michael Wanyoike <micwanyoike@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brandiqa/react-query-example"
+  },
+  "dependencies": {
+    "axios": "0.21.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-hook-form": "7.2.1",
+    "react-modal": "3.13.1",
+    "react-query": "3.13.10",
+    "react-router-dom": "5.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "3.0.0",
+    "json-server": "0.16.3",
+    "prettier": "2.2.1",
+    "vite": "4.0.3",
+    "vite-plugin-windicss": "1.8.10",
+    "windicss": "2.5.14"
+  }
+}
