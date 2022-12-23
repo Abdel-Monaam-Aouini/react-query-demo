@@ -23,7 +23,7 @@ I've written a breakdown article for this project which is available on [Sitepoi
 Clone the project
 
 ```bash
-git clone git@github.com:sitepoint-editors/react-query-demo.git
+git clone git@github.com:Monaam12/react-query-demo.git
 ```
 
 Go to the project directory
