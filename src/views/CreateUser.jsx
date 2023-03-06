@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import axios from 'axios'
-import { Redirect } from 'react-router-dom'
+import { Navigate } from 'react-router-dom'
 import { useMutation } from 'react-query'
 
 import { AppContext } from '../store/app-context'
@@ -26,7 +26,7 @@ function CreateUser() {
   }
 
   if (isSuccess) {
-    return <Redirect to="/" />
+    return <Navigate to="/" />
   }
 
   return (

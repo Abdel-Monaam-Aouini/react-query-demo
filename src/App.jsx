@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
 
@@ -24,23 +24,13 @@ function App() {
       <main className="container p-4 mx-auto mt-8 lg:w-screen-lg">
         <QueryClientProvider client={queryClient}>
           <AppContextProvider>
-            <Switch>
-              <Route path="/" exact>
-                <BasicQuery />
-              </Route>
-              <Route path="/paginated">
-                <PaginatedQuery />
-              </Route>
-              <Route path="/infinite">
-                <InfiniteQuery />
-              </Route>
-              <Route path="/user/create">
-                <CreateUser />
-              </Route>
-              <Route path="/user/edit/:id">
-                <EditUser />
-              </Route>
-            </Switch>
+            <Routes>
+              <Route path="/" exact={true} element={<BasicQuery />} />
+              <Route path="/paginated" element={<PaginatedQuery />} />
+              <Route path="/infinite" element={<InfiniteQuery />} />
+              <Route path="/user/create" element={<CreateUser />} />
+              <Route path="/user/edit/:id" element={<EditUser />} />
+            </Routes>
           </AppContextProvider>
           <ReactQueryDevtools initialIsOpen={false} />
         </QueryClientProvider>
