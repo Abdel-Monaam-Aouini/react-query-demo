@@ -1,0 +1,45 @@
+name: Master
+
+on:
+  push:
+    branches: [ "master" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets the GITHUB_TOKEN permissions to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
+
+jobs:
+  format:
+    name: Format
+    runs-on: ubuntu-latest
+    environment: testing
+    steps:
+      - name: 👌🏻 Checkout
+        uses: actions/checkout@v3
+      - name: 👌🏻 Setup and build
+        run: |
+          npm ci
+          npm run format
+
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    environment: testing
+    steps:
+      - name: 👌🏻 Checkout
+        uses: actions/checkout@v3
+      - name: 👌🏻 Setup and build
+        run: |
+          npm ci
+          npm run build
+          npm run preview &

@@ -10,7 +10,7 @@ function Navbar() {
         <img src="/logo.svg" alt="React Query" width="200" />
       </Link>
       <div className="flex">
-        <NavLink to="/" exact>
+        <NavLink to={'/'} exact>
           Basic
         </NavLink>
         <NavLink to="/paginated">Paginated</NavLink>

@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { useQuery, useMutation } from 'react-query'
-import { useParams, Redirect } from 'react-router-dom'
+import { useParams, Navigate } from 'react-router-dom'
 
 import UserForm from '../components/UserForm'
 
@@ -34,7 +34,7 @@ function EditUser() {
   }
 
   if (isSuccess) {
-    return <Redirect to="/" />
+    return <Navigate to="/" />
   }
 
   return (
