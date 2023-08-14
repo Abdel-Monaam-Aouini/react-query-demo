@@ -30,7 +30,7 @@
     "json-server": "0.17.3",
     "prettier": "3.0.1",
     "vite": "4.4.9",
-    "vite-plugin-windicss": "1.9.0",
+    "vite-plugin-windicss": "1.9.1",
     "windicss": "3.5.6"
   }
 }
