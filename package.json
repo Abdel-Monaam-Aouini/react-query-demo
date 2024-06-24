@@ -23,7 +23,7 @@
     "react-hook-form": "7.52.0",
     "react-modal": "3.16.1",
     "react-query": "3.39.3",
-    "react-router-dom": "6.23.1"
+    "react-router-dom": "6.24.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "4.3.1",
